@@ -1,0 +1,56 @@
+package day08.exception;
+/*
+ * [[ 예외 (Exception)
+ * 프로그램 실행 도중 발생되는 개발자가 해결 가능한 에러에 해당된다
+ * 
+ * 예외 처리 방법
+ * try {
+ *   실행코드
+ *   } catch (익셉션클래스명 변수명) {
+ *   	해당 예외가 발생했을 경우 실행할 코드
+ *   } finally {
+ *   	정상 또는 예외가 발생해도 실행되는 블럭
+ *   }
+ *  
+ */
+public class MainClass01 {
+	public static void main(String[] args) {
+		int num1 = 10;  //제수
+		int num2 = 0;   //피제수
+		int result = 0;
+		
+		/*
+		if(num2 != 0) {
+			result = num1 / num2;  // Exception: / by Zero
+			System.out.println("result : "+ result);
+		} else {
+			System.out.println("어떠한 수를 0으로 나눌 수 없습니다");
+		}
+		*/
+		
+//		System.out.println(num1);
+//		System.out.println(num2);
+		
+		try {
+			// 정상 실행코드
+			result = num1 / num2;
+			System.out.println("result : " + result);
+		}catch (Exception e) {
+			System.out.println("관리자에게 문의 바랍니다. 1544-1234");
+			System.out.println("어떠한 수를 0으로 나눌 수 없습니다");
+			e.printStackTrace();
+			
+			System.out.println("에러 메시지 : " + e.getMessage());
+			
+		}
+		
+	
+		
+		
+		
+		
+		
+	}
+	
+
+}
