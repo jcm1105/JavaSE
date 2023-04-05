@@ -55,6 +55,30 @@ public class MainClass01 {
 		num1 = 20;
 		System.out.println(System.identityHashCode(num1));
 		
+		// String toString() 오버라이딩 : 문자열 값이 나오게 메소드 재정의 되어있다
+		// String 기본형이 아님에도 immutable 특성을 가진다
+		String str = "hello";
+		System.out.println("str :" + str);
+		System.out.println("str :" + str.toString());
+		
+		String str2 = "hello";  //immutable
+		System.out.println(System.identityHashCode(str2));
+		System.out.println(System.identityHashCode(str2));
+		
+		String str3 = new String("hello"); //imutable (x)
+		System.out.println("str3 : " +str3);
+		System.out.println("str3 : " +str3.toString());
+		System.out.println(System.identityHashCode(str3));
+		
+		num1 = 10;
+		num2 = 10;
+		if(num1 == num2) { // 기본형은 == 비교연산자로 비교가능
+			System.out.println("num1과 num2 는 같다");
+		}
+		
+		if(str == str2) {
+			System.out.println("str과 str2 은 같다");
+		}
 		
 	}
 
