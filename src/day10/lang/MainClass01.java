@@ -80,6 +80,14 @@ public class MainClass01 {
 			System.out.println("str과 str2 은 같다");
 		}
 		
+		if(str2 == str3) {
+			System.out.println("str2과 str3은 같다");
+		}
+		
+		// String 실제값을 비교하려면 equals() 메소드 사용해야 한다
+		if(str.equals(str3)) {
+			System.out.println("str과 str3은 같다");
+		}
 	}
 
 }
