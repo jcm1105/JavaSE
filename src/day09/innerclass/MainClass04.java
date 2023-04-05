@@ -20,6 +20,31 @@ public class MainClass04 {
 			}
 			
 		});
+		s.m.Sing();
+		
+		DanceMusic dMusic = new DanceMusic();
+		Singer s2 = new Singer(dMusic);
+		s2.m.Sing();
+		
 	}
 
+}
+
+
+class DanceMusic implements Music {
+
+	String genre = "댄스";
+	
+	@Override
+	public void listen() {
+		System.out.println( genre + "음악을 들어요");
+		
+	}
+
+	@Override
+	public void Sing() {
+		System.out.println( genre + "노래를 불러요");
+		
+	}
+	
 }
